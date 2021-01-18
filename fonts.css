@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'kaeru kaeru';
+    src: url('kaerukaeru-Regular.woff2') format('woff2'),
+        url('kaerukaeru-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IDEOLOGY';
+    src: url('IDEOLOGY.woff2') format('woff2'),
+        url('IDEOLOGY.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

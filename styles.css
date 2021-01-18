@@ -1,0 +1,29 @@
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+p {
+  color: coral;
+  width: 500px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  padding: 10px;
+  border: 10px dashed chartreuse;
+
+  font-size: 46px;
+  font-style: italic;
+  text-decoration: line-through;
+  text-transform: lowercase;
+  letter-spacing: -1px;
+  font-family: "kaeru kaeru", sans-serif;
+}
+
+h3 {
+  font-style: italic;
+}
+
+.lifestory {
+  color: blueviolet;
+}
