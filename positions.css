@@ -83,7 +83,7 @@ input:focus {
   left: 0px;
   top: 50px;
   background: red;
-  transition: background 500ms ease-in, border-radius 2s ease-in 0.5s;
+  transition: background 500ms ease-in, border-radius 1s ease-in 0.5s;
   /* transition: background 1s ease-in 2s; с задержкой */
 }
 
@@ -124,10 +124,6 @@ input:focus {
 .relative-parent:hover .child-3 {
   /* background: lightgreen; */
   transform: translate(300px, -50px) scale(-0.5);
-}
-
-.relative-parent:hover .child-2 {
-  background: red;
 }
 
 .relative-parent:hover .child-3 {
