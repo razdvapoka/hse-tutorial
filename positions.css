@@ -1,0 +1,135 @@
+body {
+  min-height: 300vh;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+p {
+  font-size: 30px;
+}
+
+p:hover {
+  /* font-size: 50px; */
+  color: blueviolet;
+}
+
+button:disabled {
+  color: lightgray;
+}
+
+button:active {
+  border: 2px solid blue;
+}
+
+input {
+  border: 0;
+}
+
+input:focus {
+  background: black;
+  color: white;
+  outline: 0;
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+  border: 3px dashed blueviolet;
+  border-radius: 40px;
+  text-align: center;
+  padding: 20px;
+}
+
+.fixed-box {
+  position: fixed;
+  right: 40px;
+  top: 0;
+}
+
+.sticky-box {
+  position: sticky;
+  top: 40px;
+  margin-bottom: 40px;
+
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.placeholder {
+  margin-top: 50px;
+  height: 300vh;
+  padding-left: 40px;
+  background: linear-gradient(red, green);
+}
+
+.relative-parent {
+  height: 800px;
+  border: 2px solid blue;
+  position: relative;
+}
+
+.absolute-child {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  background: radial-gradient(circle at 25% 25%, red, green, blue);
+
+  position: absolute;
+}
+
+.child-1 {
+  left: 0px;
+  top: 50px;
+  background: red;
+  transition: background 500ms ease-in, border-radius 2s ease-in 0.5s;
+  /* transition: background 1s ease-in 2s; с задержкой */
+}
+
+.child-1:hover {
+  background: blue;
+  /* width: 200px; */
+  border-radius: 0;
+  /* border: 3px dashed red; */
+}
+
+.child-2 {
+  right: 50px;
+  top: 50px;
+  transition: transform 0.5s linear;
+}
+
+.child-2:hover {
+  transform: rotate(360deg);
+  /* transform: scale(2, 0.5); */
+  /* transform: translate(25px, 25px); */
+  /* transform: skew(40deg, 30deg); */
+}
+
+.child-3 {
+  left: 50px;
+  bottom: 50px;
+  transition: background 0.3s ease, transform 0.5s ease-out;
+}
+
+.child-4 {
+  border-radius: 0;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.relative-parent:hover .child-3 {
+  /* background: lightgreen; */
+  transform: translate(300px, -50px) scale(-0.5);
+}
+
+.relative-parent:hover .child-2 {
+  background: red;
+}
+
+.relative-parent:hover .child-3 {
+  background: greenyellow;
+}
