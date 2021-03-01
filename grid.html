@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS GRID</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .parent {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+      }
+
+      .child {
+        border: 5px dashed darksalmon;
+        background: darkseagreen;
+        min-height: 100px;
+      }
+
+      .div1 {
+        grid-area: 1 / 2 / 3 / 4;
+      }
+      .div2 {
+        grid-area: 3 / 6 / 5 / 9;
+      }
+      .div3 {
+        grid-area: 2 / 12 / 4 / 13;
+      }
+      .div4 {
+        grid-area: 4 / 1 / 5 / 5;
+      }
+      .div5 {
+        grid-area: 1 / 8 / 2 / 11;
+      }
+      .div6 {
+        grid-area: 4 / 10 / 6 / 12;
+      }
+      .div7 {
+        grid-area: 6 / 7 / 7 / 8;
+      }
+      .div8 {
+        grid-area: 2 / 5 / 3 / 6;
+      }
+      .div9 {
+        grid-area: 5 / 4 / 9 / 5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="div1 child"></div>
+      <div class="div2 child"></div>
+      <div class="div3 child"></div>
+      <div class="div4 child"></div>
+      <div class="div5 child"></div>
+      <div class="div6 child"></div>
+      <div class="div7 child"></div>
+      <div class="div8 child"></div>
+      <div class="div9 child"></div>
+    </div>
+  </body>
+</html>

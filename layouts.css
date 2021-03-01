@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px;
+  margin: 0;
+}
+
+.parent {
+  display: flex;
+  margin-top: 50px;
+}
+
+.item + .item {
+  margin-left: 20px;
+}
+
+.item {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  background-color: ghostwhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.item span {
+  background-color: rgba(111, 111, 111, 0.5);
+  display: block;
+  border-radius: 9999px;
+  min-width: 25px;
+  min-height: 25px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  width: calc(100vw - 100px);
+  height: 50vw;
+}
+
+.div1 {
+  grid-area: 2 / 2 / 4 / 4;
+  border: 2px dashed blue;
+}
+.div2 {
+  grid-area: 4 / 4 / 6 / 6;
+  border: 2px dashed blue;
+}
+.div3 {
+  grid-area: 2 / 5 / 3 / 6;
+  border: 2px dashed blue;
+}
+.div4 {
+  grid-area: 5 / 1 / 6 / 3;
+  border: 2px dashed blue;
+}
+.div5 {
+  grid-area: 1 / 4 / 2 / 5;
+  border: 2px dashed blue;
+}
+
+.circleBox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 9999px;
+  /* background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+   */
+  background: linear-gradient(45deg, red, green, blue);
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.circle:hover {
+  animation-play-state: running;
+}
+
+.circle:active,
+.circle:focus {
+  outline: none;
+}
+
+.circle:active {
+  animation-duration: 1s;
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(0);
+  }
+  10% {
+    transform: rotate(0);
+  }
+  90% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.stripeBox {
+  background-image: repeating-linear-gradient(
+    45deg,
+    yellow,
+    yellow 10px,
+    red 10px,
+    red 20px
+  );
+  width: 1000px;
+  height: 1000px;
+  margin: 0 auto;
+}
+
+.repeat {
+  /* border: 1px dashed blue; */
+  border-radius: 9999px;
+  margin: 100px auto;
+  width: 1000px;
+  height: 1000px;
+  background-image: repeating-linear-gradient(
+    45deg,
+    yellow,
+    yellow 10px,
+    red 10px,
+    red 20px
+  );
+}
+
+.repeat:hover {
+  animation: spin2 5s ease-in-out 0.3s infinite alternate;
+}

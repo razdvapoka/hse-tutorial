@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
+    <link rel="stylesheet" href="about-styles.css" />
   </head>
   <body>
+    <button id="red-btn">make bg red again!</button>
     <h1>About</h1>
     <a href="index.html">home</a>
     <a
@@ -14,5 +16,26 @@
     >
       marquee mdn docs
     </a>
+    <div class="img-on-bg"></div>
+    <div class="buttons">
+      <span id="counter">4</span>
+      <button id="clown-btn">add clown circle</button>
+      <button id="rect-btn">add rounded rect</button>
+      <button id="fancy-btn">add fancy rect</button>
+      <button id="delete-clown-btn">delete clown circle</button>
+      <button id="delete-body">delete body</button>
+    </div>
+    <div class="imageBox">
+      <img src="dudes.png" width="400px" alt="" />
+      <img class="second-image" src="dudes.png" width="400px" alt="" />
+    </div>
+    <button id="toggle-btn">toggle blue bg</button>
+    <div class="clown-box">
+      <div class="clown-circle"></div>
+      <div class="clown-circle"></div>
+      <div class="clown-circle"></div>
+      <div class="clown-circle"></div>
+    </div>
+    <script src="about-scripts.js"></script>
   </body>
 </html>
