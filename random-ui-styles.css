@@ -1,0 +1,99 @@
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: ghostwhite;
+  transition: background 0.3s ease;
+}
+
+.clown-box {
+  margin: 100px 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.clown-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 9999px;
+  background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
+  margin: 10px;
+
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+
+  border: none;
+  cursor: pointer;
+}
+
+.clown-circle:focus {
+  outline: none;
+}
+
+.clown-circle:hover {
+  animation-play-state: running;
+}
+
+.clown-circle:nth-child(even) {
+  animation-direction: reverse;
+}
+
+.clown-circle:active {
+  animation-duration: 1s;
+}
+
+.blue-bg {
+  background: rgb(146, 81, 207);
+}
+
+.rounded-rect {
+  width: 300px;
+  height: 150px;
+  border-radius: 20px;
+  border: none;
+  margin: 10px;
+}
+
+.fancy-rect {
+  width: 150px;
+  height: 500px;
+}
+
+.make-me-spin {
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+.buttons {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 50;
+  background: rgb(146, 81, 207, 0.5);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.buttons > * + * {
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
