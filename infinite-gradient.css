@@ -22,6 +22,7 @@ body {
 
 .box {
   overflow: hidden;
+  height: 100vh;
 }
 
 .grad-box {
